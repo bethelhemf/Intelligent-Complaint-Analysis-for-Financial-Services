@@ -1,0 +1,12 @@
+$vscodeSettings = @"
+{
+    "python.defaultInterpreterPath": "venv/Scripts/python.exe",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    }
+}
+"@
+$vscodeSettings | Out-File -FilePath ".vscode/settings.json" -Encoding utf8

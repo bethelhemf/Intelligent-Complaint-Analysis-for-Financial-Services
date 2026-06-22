@@ -1,0 +1,13 @@
+$reqs = @"
+pandas==2.2.0
+polars==0.20.10
+matplotlib==3.8.3
+seaborn==0.13.2
+tqdm==4.66.2
+sentence-transformers==2.5.1
+faiss-cpu==1.7.4
+langchain-text-splitters==0.0.1
+ipykernel==6.29.3
+numpy==1.26.4
+"@
+$reqs | Out-File -FilePath "requirements.txt" -Encoding utf8
