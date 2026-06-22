@@ -1,16 +1,7 @@
-$gitignoreContent = @"
-# BLOCK ONLY THE HEAVY STUFF
-data/
+﻿data/
 vector_store/
 venv/
 __pycache__/
 *.csv
 *.faiss
 *.pkl
-*.zip
-
-# ALLOW EVERYTHING ELSE
-!notebooks/
-!src/
-!README.md
-$gitignoreContent | Out-File -FilePath ".gitignore" -Encoding utf8

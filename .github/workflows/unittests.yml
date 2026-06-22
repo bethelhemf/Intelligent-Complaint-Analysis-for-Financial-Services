@@ -1,17 +1,15 @@
-﻿name: CrediTrust Validation CI
-on: [push, pull_request]
+﻿name: CrediTrust Production CI
+on: [push]
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Verification
-      run: |
-        echo "Validating Folder Structure..."
-        ls src/
-        ls notebooks/
-        python -c "print('Repository integrity check passed.')"
+      - uses: actions/checkout@v3
+      - name: Setup
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Verify
+        run: |
+          pip install -r requirements.txt
+          python -c "import app; print('Production Build Ready')"
